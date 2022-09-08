@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #ececec;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+.All-Content{
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-areas: ". conteudo .";
+}
+.conteudo{
+    grid-area: conteudo;
+}
+.components{
+    display: grid;
+    grid-template-areas: "header"
+    "main"
+    "footer";
+}
+header{
+    margin-top: 2%;
+    grid-area: header;
+}
+main{
+    margin-top: 38px;
+    grid-area: main;
+}
+footer{
+    grid-area: footer;
+}
+.LogoHeader{
+    width: 28vw;
+}
+.NavLista{
+    color: #fffff4;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.NavLista:hover{
+    color: #A10035;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 13vh;
+    width: 100%;
+}
+.mobile-menu{
+    margin-left: 10%;
+    width: min-content;
+    margin-top: 1%;
+    cursor: pointer;
+    z-index: 1000;
+}
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background-color: #272343;
+    margin: 8px;
+    cursor: pointer;
+    transition: .5s;
+}
+.nav-list{
+    position: absolute;
+    top: 15vh;
+    right: 0;
+    width: 18vw;
+    height: 32vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+    background-color: #333; /*rgba(222, 222, 222, 0.534)*/
+    border-radius: 10px;
+}
+.mobile-menu{
+    display: block;
+}
+.NavLista{
+    
+    color: #fff;
+    margin: 0;
+    opacity: 1;
+}
+.nav-list.active {
+    transform: translate(-30%);
+}
+@keyframes navLinkFade { 
+    from{
+        opacity: 0;
+        transform: translatex(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translatex(0);
+    }
+}
+.mobile-menu.active .line1{
+    box-sizing: content-box;
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+.mobile-menu.active .line2{
+ opacity: 0;
+}
+.mobile-menu.active .line3{
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* FIm header */ 
+
+/* Inicio Main */
+
+.MainEntrance{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "Title Subtitle"
+    "Title Subtitle";
+    gap: 30px;
+}
+.TituloBotao{
+    grid-area: Title;
+    color: #2D334A;
+}
+.TituloPrincipal{
+    font-size: 4.375em;
+    color: #272343;
+    font-weight: 900;
+}
+.Subtitulo1{
+    grid-area: Subtitle;
+    font-size: 1.875em;
+    color: #2D334A;
+    font-weight: 900;
+}
+.btnSaibaMais{
+    background-color: #FFD803;
+    color:#272343;
+    min-width:  70%;
+    min-height: 88px;
+    font-weight: 900;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: 900;
+    margin-top: 0.8375em;
+    text-decoration: none;
+}
+.link{
+    color: #272343;
+    text-decoration: underline #bba500;
+}
+.Subtitle2{
+    margin-top: 1.875em;
+    grid-area: Subtitle;
+    font-size: 1.25em;
+    color: #2D334A;
+    font-weight: 900;
+}
+
+/* Titulos Alternativos */
+.TitulosAlt{
+    display: grid;
+    grid-template-areas: "APJ CDP";
+    gap: 30px;
+    margin-top: 30vh;
+}
+
+.TitulosAlt div h1 {
+    color: #272343;
+    font-size: 1.875em;
+    font-weight: 800;
+    
+}
+.TitulosAlt div p{
+    color: #2D334A;
+    font-size: 0.9375em;
+    font-weight: 600;
+    width: 80%;
+}
+.TitulosAltEsquerdo{
+    grid-area: APJ;
+}
+.TitulosAltDireito{
+    grid-area: CDP;
+}
+.Texts{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+.Texts h1{
+    color: #272343;
+    font-size: 1.875em;
+    font-weight: 800;
+}
+.Texts p{
+    color: #2D334A;
+    font-size: 0.900em;
+    font-weight: 600;
+    width: 70%;
+    text-align: center;
+    margin-top: 30px;
+}
+.Mockup{
+    background-color: #464646;
+    width: 230px;
+    height: 200px;
+}
+footer{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+footer img{
+    width: 25vh;
+}

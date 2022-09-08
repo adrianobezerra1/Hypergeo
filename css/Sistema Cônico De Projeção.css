@@ -1,0 +1,34 @@
+main{
+    display: grid;
+    justify-content: center;
+    margin-top: 50px;
+}
+.title{
+    font-size: 2.875em;
+    text-align: center;
+    color: #272343;
+}
+.subtitle{
+    color: #272343;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.575em;
+}
+.containerText{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: ". a1 a1 . a2 a2 ";
+}
+.content1 ul li {
+    padding: 5px;
+}
+.content1{
+    font-size: 1.2em;
+    color: #272343;
+    grid-area: a1;
+}
+.content2{
+    font-size: 1.2em;
+    grid-area: a2;
+}

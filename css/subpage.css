@@ -1,0 +1,14 @@
+.Textos{
+    font-size: 1em;
+    padding: 5px;
+    text-decoration: underline #333;
+    color: #2D334A;
+    text-decoration: underline #A10035;
+}
+.gif{
+    border: 1px solid #333;
+    width: 80%;
+}
+button{
+    color: #2D334A;
+}

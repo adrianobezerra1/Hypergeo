@@ -1,0 +1,16 @@
+.subtitle{
+    font-size: 1em;
+}
+img{
+    width: 30vw;
+    justify-self:center;
+}
+.ImgALT{
+    width: 50vw;
+}
+.TextoDesalinhado{
+    font-size: .8em;
+    color: #2D334A;
+    text-decoration: underline #bba500;
+    margin-left: 10vw;
+}
