@@ -3,12 +3,57 @@
     padding: 5px;
     text-decoration: underline #333;
     color: #2D334A;
-    text-decoration: underline #A10035;
+    text-decoration: underline #4F4FB3;
 }
 .gif{
     border: 1px solid #333;
     width: 80%;
 }
+
+
+
 button{
     color: #2D334A;
+}
+.obj3d{
+    width: 100%;
+    height: 70vh;
+    border-radius: 50px;
+}
+.Subtitle{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.btnMobile{
+    background-color: #FFD803;
+    color:#272343;
+    min-width:  70%;
+    min-height: 88px;
+    font-weight: 900;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: 900;
+    margin-top: 0.8375em; 
+    text-decoration: none;
+}
+
+@media (max-width: 800px){
+    .TituloBotao{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .botaoMobile{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .btnSaibaMais{
+        display: none;
+    }
 }

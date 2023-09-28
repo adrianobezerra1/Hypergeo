@@ -11,15 +11,17 @@ a {
     scroll-behavior: smooth;
 }
 body{
-    background-color: #ececec;
+   /* background-color: #ececec; */
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    
 }
 .All-Content{
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
     grid-template-areas: ". conteudo .";
+    
 }
 .conteudo{
     grid-area: conteudo;
@@ -41,6 +43,11 @@ main{
 footer{
     grid-area: footer;
 }
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .LogoHeader{
     width: 28vw;
 }
@@ -50,78 +57,89 @@ footer{
     transition: 0.3s;
 }
 .NavLista:hover{
-    color: #A10035;
-}
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 13vh;
-    width: 100%;
-}
-.mobile-menu{
-    margin-left: 10%;
-    width: min-content;
-    margin-top: 1%;
-    cursor: pointer;
-    z-index: 1000;
-}
-.mobile-menu div{
-    width: 32px;
-    height: 2px;
-    background-color: #272343;
-    margin: 8px;
-    cursor: pointer;
-    transition: .5s;
-}
-.nav-list{
-    position: absolute;
-    top: 15vh;
-    right: 0;
-    width: 18vw;
-    height: 32vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in;
-    background-color: #333; /*rgba(222, 222, 222, 0.534)*/
-    border-radius: 10px;
-}
-.mobile-menu{
-    display: block;
-}
-.NavLista{
-    
-    color: #fff;
-    margin: 0;
-    opacity: 1;
-}
-.nav-list.active {
-    transform: translate(-30%);
-}
-@keyframes navLinkFade { 
-    from{
-        opacity: 0;
-        transform: translatex(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translatex(0);
-    }
-}
-.mobile-menu.active .line1{
-    box-sizing: content-box;
-    transform: rotate(-45deg) translate(-8px, 8px);
-}
-.mobile-menu.active .line2{
- opacity: 0;
-}
-.mobile-menu.active .line3{
-    transform: rotate(45deg) translate(-5px, -7px);
+    color: #4F4FB3;
 }
 
+#menu {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+  }
+  
+  #menu a {
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: #272343;
+    transition: 0.9s;
+  }
+  #menu a:hover {
+    text-decoration: underline #4F4FB3;
+  }
+  
+  #btn-mobile {
+    display: none;
+  }
+  
+  @media (max-width: 800px) {
+    #menu {
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 70px;
+      right: 0px;
+      background: #e7e7e7;
+      transition: 0.6s;
+      z-index: 1000;
+      height: 0px;
+      visibility: hidden;
+      overflow-y: hidden;
+    }
+    #nav.active #menu {
+      height: calc(100vh - 70px);
+      visibility: visible;
+      overflow-y: auto;
+    }
+    #menu a {
+      padding: 1rem 0;
+      margin: 0 1rem;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    }
+    #btn-mobile {
+      display: flex;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      gap: 0.5rem;
+    }
+    #hamburger {
+      border-top: 2px solid;
+      width: 20px;
+    }
+    #hamburger::after,
+    #hamburger::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: currentColor;
+      margin-top: 5px;
+      transition: 0.3s;
+      position: relative;
+    }
+    #nav.active #hamburger {
+      border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+      transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+  }
 /* FIm header */ 
 
 /* Inicio Main */
@@ -160,8 +178,18 @@ nav{
     cursor: pointer;
     font-size: 1.5em;
     font-weight: 900;
-    margin-top: 0.8375em;
+    margin-top: 0.8375em; 
     text-decoration: none;
+    transition: 0.7s;
+}
+.btnSaibaMais > a{
+    color: #2D334A;
+    text-decoration: none;
+}
+.btnSaibaMais:hover{
+    background-color: #ffd9008c;
+    color: #fff;
+    transition: 0.3s;
 }
 .link{
     color: #272343;
@@ -173,12 +201,14 @@ nav{
     font-size: 1.25em;
     color: #2D334A;
     font-weight: 900;
+    text-align: justify;
 }
 
 /* Titulos Alternativos */
 .TitulosAlt{
-    display: grid;
-    grid-template-areas: "APJ CDP";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     gap: 30px;
     margin-top: 30vh;
 }
@@ -190,16 +220,26 @@ nav{
     
 }
 .TitulosAlt div p{
+    margin-top: 15px;
+    text-align: justify;
     color: #2D334A;
     font-size: 0.9375em;
     font-weight: 600;
-    width: 80%;
 }
-.TitulosAltEsquerdo{
-    grid-area: APJ;
+.TitulosAltEsquerdo > h1{
+    padding-right: 15px;
+    display: flex;
+    justify-content: center;
 }
-.TitulosAltDireito{
-    grid-area: CDP;
+.TitulosAltEsquerdo > h1 > span{
+    padding-left: 12px;
+}
+.TitulosAltDireito > h1{
+    display: flex;
+    justify-content: center;
+}
+.TitulosAltDireito > h1 > span{
+    padding-left: 12px;
 }
 .Texts{
     margin-top: 60px;
@@ -216,8 +256,8 @@ nav{
     color: #2D334A;
     font-size: 0.900em;
     font-weight: 600;
-    width: 70%;
-    text-align: center;
+    width: 100%;
+    text-align: justify;
     margin-top: 30px;
 }
 .Mockup{
@@ -233,4 +273,47 @@ footer{
 }
 footer img{
     width: 25vh;
+}
+.botaoMobile{
+    display: none;
+}
+span{
+    color: #4F4FB3;
+}
+@media (max-width: 800px) {
+    .MainEntrance{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "Title"
+        "Subtitle";
+    }
+    .LogoHeader{
+        width: 250px; 
+    }
+    .TituloBotao{
+        display: none;
+    }
+    .TitulosAlt{
+        margin-top: 10vh;
+    }
+    .TitulosAlt div p{
+        margin-top: 15px;
+        text-align: justify;
+        color: #2D334A;
+        font-size: 1.3em;
+        font-weight: 600;
+    }
+    .Texts p{
+        color: #2D334A;
+        font-size: 1.2em;
+        font-weight: 600;
+        width: 100%;
+        text-align: justify;
+        margin-top: 30px;
+    }
+}
+@media (max-width: 600px) {
+    .All-Content{
+        grid-template-areas: ". conteudo .";
+    }
 }

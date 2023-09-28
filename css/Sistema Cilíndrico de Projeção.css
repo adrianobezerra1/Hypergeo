@@ -22,12 +22,25 @@ main{
 }
 .content1 ul li {
     padding: 5px;
+    
 }
 .content1{
     font-size: 1.2em;
     color: #272343;
     grid-area: a1;
+    
 }
+
+.content1 ul {
+        display: block;
+        list-style-type: disc;
+        margin-top: 1em;
+        margin-bottom: 1 em;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 40px;
+      }
+
 .content2{
     width: 60%;
     font-size: 1.2em;
@@ -41,7 +54,7 @@ main{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    text-align: center;
+    text-align: justify;
 } .SubText p {
     color: #272343;
     padding: 8px;
@@ -71,7 +84,18 @@ main{
     width: 30vw;
 }
 .hrcss {
-    border: 1px solid #9F2525;
+    border: 1px solid #4F4FB3;
     width: 100%;
     margin: 30px;
+}
+@media (max-width: 800px){
+    .columnsIMG{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .columnsIMG div{
+        display: flex;
+        justify-content: center;
+    }
 }

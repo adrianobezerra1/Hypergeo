@@ -1,6 +1,6 @@
 main{
     display: grid;
-    justify-content: center;
+    justify-content: start;
     margin-top: 50px;
 }
 .title{
@@ -31,4 +31,16 @@ main{
 .content2{
     font-size: 1.2em;
     grid-area: a2;
+}
+span{
+    color: #4F4FB3
+}
+
+ul li{
+    list-style: none;
+}
+@media (max-width: 800px){
+    .containerText{
+        display: block;
+    }
 }
