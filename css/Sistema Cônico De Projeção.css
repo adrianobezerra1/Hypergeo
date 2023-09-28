@@ -11,19 +11,21 @@ main{
 .subtitle{
     color: #272343;
     margin-top: 30px;
-    text-align: center;
+    text-align: justify;
     font-size: 1.575em;
 }
-.containerText{
+/*.containerText{
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas: ". a1 a1 . a2 a2 ";
-}
+}*/
 .content1 ul li {
     padding: 5px;
+    list-style-type: circle;
+    margin-left: 20px;
 }
-.content1{
+/*.content1{
     font-size: 1.2em;
     color: #272343;
     grid-area: a1;
@@ -31,7 +33,7 @@ main{
 .content2{
     font-size: 1.2em;
     grid-area: a2;
-}
+}*/
 span{
     color: #4F4FB3
 }

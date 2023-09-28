@@ -270,6 +270,7 @@ footer{
     display: flex;
     justify-content: space-evenly;
     padding: 30px;
+    border-top: 2px solid ;
 }
 footer img{
     width: 25vh;
@@ -316,4 +317,10 @@ span{
     .All-Content{
         grid-template-areas: ". conteudo .";
     }
+}
+
+.subtitleIMG{
+    margin-top: 10px;
+    font-size: 1em;
+    color: #272343;
 }

@@ -1,9 +1,10 @@
 .titleIMG{
     font-size: 1.6em;
-    text-decoration: underline #4F4FB3;
-    text-align: center;
+    padding: 0 10px;
+    text-align: justify;
     color: #272343;
     margin-top: 5vh;
+    background-color: #fffc42;
 }
 .subtitleIMG{
     margin-top: 10px;
@@ -17,6 +18,8 @@ img{
 .titleCaracteristicas{
     color: #272343;
     font-size: 1.4em;
+    margin-bottom: 30px;;
+
 }
 .subtitleCaracteristicas{
     font-size: .9em;
